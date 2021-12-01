@@ -1,0 +1,21 @@
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+}
+
+.decorador {
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    width: 100px;
+    height: 55px;
+}
+
+.decorador:hover {
+    color: white;
+    background-color: darkred;
+    cursor: pointer;
+}
+
+a:link {
+    text-decoration: none;
+}

@@ -1,0 +1,65 @@
+{% include 'header.html' %} {% include 'navbar.html' %}
+
+<head>
+    <style>
+        .decorador {
+            text-decoration: none;
+            color: white;
+            background-color: red;
+            width: 70px;
+            height: 30px;
+            border: blue 2px solid;
+            border-radius: 20px;
+        }
+        
+        .decorador:hover {
+            color: white;
+            background-color: darkred;
+            cursor: pointer;
+        }
+        
+        a:link {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<div class="container" style="text-align: center; margin-top: 1em;">
+    <h1>Bem vindo, {{user.name}}</h1>
+    <h2>Suas tarefas:</h2>
+</div>
+
+<div class="container" style="margin-top: 2em; max-width: fit-content;">
+    {% for task in tasks %}
+    <div class="row" style="border-bottom: 1px solid #555; margin: 0.5em;">
+        <div class="col-9">
+            <p style="padding-right: 1em;">{{task.text}}</p>
+        </div>
+        <div class="col-3">
+            <button class="decorador">
+                    <a  href="/tasks/delete/{{task.id}}">
+                        Deletar
+                    </a>
+            </button>
+        </div>
+    </div>
+    {% endfor %}
+
+    <div class="row" style="border-bottom: 1px solid #555; margin: 0.5em;">
+        <form action="/tasks" method="POST" style="display: flex; flex-direction: row; padding-left: 0; padding-right: 0; margin: 0.5em; auto;">
+            <div class="col-9">
+                <input class="form-control" type="text" name="text" id="text" placeholder="Adicionar nova tarefa...">
+            </div>
+            <div class="col-4">
+                <button type="submit" class="btn-success">
+                    Cadastrar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% if invalid %}
+<p style="margin-top: 0.5em; color: #eb4d31">Não foi possível adicionar tarefa.</p>
+{% endif %} {% include 'footer.html' %}

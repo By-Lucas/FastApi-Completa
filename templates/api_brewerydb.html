@@ -1,0 +1,38 @@
+{% include 'header.html' %} {% include 'navbar.html' %}
+
+<link rel="stylesheet" href="/static/bootstrap.min.css">
+
+<div class="container" style="text-align: center; margin-top: 1em;">
+    <h1 class="text-success">Todas as cervejas Brewey</h1>
+    <p>Cervejas da API = https://api.openbrewerydb.org/breweries/</p>
+
+</div>
+
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">[+]</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Data criação</th>
+                <th scope="col">Contato</th>
+            </tr>
+        </thead>
+
+        {% for cervejas_info in todas_info %}
+        <tbody>
+            <tr>
+                <th scope="row">[+]</th>
+                <td>{{cervejas_info['name']}}</td>
+                <td>{{cervejas_info['created_at']}}</td>
+                <td>{{cervejas_info['phone']}}</td>
+            </tr>
+
+        </tbody>
+        {% endfor %}
+
+    </table>
+
+    <strong><hr class="text-dark"></strong>
+    <br>
+    <br>
