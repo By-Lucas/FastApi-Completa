@@ -36,5 +36,5 @@
 - Comsumption of another api, showing in a template all the beers, contacts and creation dates
 
 
-** Serve as the basis for your FastApi projects using Python **
+**Serve as the basis for your FastApi projects using Python**
 
