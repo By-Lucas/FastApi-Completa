@@ -1,5 +1,7 @@
 # FastApi-Completa
 
+<img width="300px" src="FastApi.gif">
+
 **O que tem:**
 
 - Cadastro de usuario
