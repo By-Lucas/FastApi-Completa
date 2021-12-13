@@ -1,7 +1,7 @@
 # FastApi-Completa
 
-<p>
-  <img width="460" height="300" src="FastApi.gif">
+<p align="center">
+  <img width="500" height="305" src="FastApi.gif">
 </p>
                                                       
 **O que tem:**
