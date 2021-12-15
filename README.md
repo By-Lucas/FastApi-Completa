@@ -14,6 +14,13 @@ retornando um JSON com a RESPONSE 200 e os items do payload.
 mostrando no resultado apenas um dicionário com os nomes das cervejas que estarão em uma lista.
 
 
+# Como rodar a aplicação
+ - Criar um  **ambiente virtual**, pode ver como criar pesquisando no google dependendo do seu sistema operacional
+ - Para rodar você deve usar o  **pip install -r requirements.txt** para instalar as bibliotecas
+ - Após instalar as bibliotecas é só o **uvicorn main:app --reload**
+ 
+ # O servidor vai rodar em : http://127.0.0.1:8000/
+
 
 **Serve como base para seus projetos com FastApi utilizando Python**
 
